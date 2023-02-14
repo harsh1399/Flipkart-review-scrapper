@@ -23,7 +23,12 @@ git clone https://github.com/harsh1399/Flipkart-review-scrapper.git
 pip install -r requirements.txt
 ```
 
-3. To run the flask app - 
+3. Updating MongoDB connection link - In scrap function in new_app.py file update the connection link for your MongoDB database. Line 264 (new_app.py)
+```
+db_connetion=mg.MongoClient("your mongodb atlas connection link")
+```
+
+4. To run the flask app - 
 ```
 flask --app new_app run
 ```
