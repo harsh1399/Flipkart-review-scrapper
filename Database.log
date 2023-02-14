@@ -1,0 +1,79 @@
+2023-02-13 22:20:01,107:Database: None of DNS query names exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net., _mongodb._tcp.scrapperdb.p8wac.mongodb.net.hsd1.ut.comcast.net.
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\venv\lib\site-packages\pymongo\srv_resolver.py", line 72, in _resolve_uri
+    results = resolver.query('_mongodb._tcp.' + self.__fqdn, 'SRV',
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\venv\lib\site-packages\dns\resolver.py", line 1100, in query
+    return get_default_resolver().query(qname, rdtype, rdclass, tcp, source,
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\venv\lib\site-packages\dns\resolver.py", line 1002, in query
+    raise NXDOMAIN(qnames=qnames_to_try, responses=nxdomain_responses)
+dns.resolver.NXDOMAIN: None of DNS query names exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net., _mongodb._tcp.scrapperdb.p8wac.mongodb.net.hsd1.ut.comcast.net.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\new_app.py", line 279, in scrap
+    db_connetion=mg.MongoClient("mongodb+srv://scrapper:12345@scrapperdb.p8wac.mongodb.net/scrapper?retryWrites=true&w=majority")
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\venv\lib\site-packages\pymongo\mongo_client.py", line 639, in __init__
+    res = uri_parser.parse_uri(
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\venv\lib\site-packages\pymongo\uri_parser.py", line 500, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\venv\lib\site-packages\pymongo\srv_resolver.py", line 102, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\venv\lib\site-packages\pymongo\srv_resolver.py", line 83, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\venv\lib\site-packages\pymongo\srv_resolver.py", line 79, in _resolve_uri
+    raise ConfigurationError(str(exc))
+pymongo.errors.ConfigurationError: None of DNS query names exist: _mongodb._tcp.scrapperdb.p8wac.mongodb.net., _mongodb._tcp.scrapperdb.p8wac.mongodb.net.hsd1.ut.comcast.net.
+2023-02-13 22:20:01,140:Database: local variable 'db_connetion' referenced before assignment
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\new_app.py", line 287, in scrap
+    db=db_connetion['Scrapper']
+UnboundLocalError: local variable 'db_connetion' referenced before assignment
+2023-02-13 22:44:04,242:Database: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\new_app.py", line 304, in scrap
+    total_reviews=int(product_html.find_all('div',{'class':"_3UAT2v _16PBlm"})[0].text.replace('All','').replace('reviews',''))
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\new_app.py", line 309, in scrap
+    total_reviews=int(product_html.find_all('div',{'class':"_3UAT2v _33R3aa"})[0].text.replace('All','').replace('reviews',''))
+IndexError: list index out of range
+2023-02-13 22:44:48,879:Database: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\new_app.py", line 304, in scrap
+    total_reviews=int(product_html.find_all('div',{'class':"_3UAT2v _16PBlm"})[0].text.replace('All','').replace('reviews',''))
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\new_app.py", line 309, in scrap
+    total_reviews=int(product_html.find_all('div',{'class':"_3UAT2v _33R3aa"})[0].text.replace('All','').replace('reviews',''))
+IndexError: list index out of range
+2023-02-13 22:45:18,032:Database: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\new_app.py", line 304, in scrap
+    total_reviews=int(product_html.find_all('div',{'class':"_3UAT2v _16PBlm"})[0].text.replace('All','').replace('reviews',''))
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\new_app.py", line 309, in scrap
+    total_reviews=int(product_html.find_all('div',{'class':"_3UAT2v _33R3aa"})[0].text.replace('All','').replace('reviews',''))
+IndexError: list index out of range
+2023-02-13 22:46:22,364:Database: list index out of range
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\new_app.py", line 304, in scrap
+    total_reviews=int(product_html.find_all('div',{'class':"_3UAT2v _16PBlm"})[0].text.replace('All','').replace('reviews',''))
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\flipkart-full-scrapper\new_app.py", line 309, in scrap
+    total_reviews=int(product_html.find_all('div',{'class':"_3UAT2v _33R3aa"})[0].text.replace('All','').replace('reviews',''))
+IndexError: list index out of range
