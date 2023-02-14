@@ -261,7 +261,7 @@ def scrap():
             """Conncecting with DataBase"""
             db_connetion = None
             try:
-                db_connetion=mg.MongoClient("mongodb+srv://harsh-mongodb:harsh-mongodb@cluster0.xn2zbbg.mongodb.net/?retryWrites=true&w=majority")
+                db_connetion=mg.MongoClient("your mongodb atlas connection link")
                 # print(db_connetion.test)
                 DBlogger.debug('Successfully Connected with MongoDB !')
 
